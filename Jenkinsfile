@@ -62,13 +62,13 @@ pipeline {
 		stage('Backend') {
 			steps {
 				echo 'Checking Syntax ...'
-				sh 'docker pull nginxproxymanager/nginx-full:certbot-node'
+				sh 'docker pull registry.rlt.sk/nginx-full:certbot-node'
 				// See: https://github.com/yarnpkg/yarn/issues/3254
 				sh '''docker run --rm \\
 					-v "$(pwd)/backend:/app" \\
 					-v "$(pwd)/global:/app/global" \\
 					-w /app \\
-					nginxproxymanager/nginx-full:certbot-node \\
+					registry.rlt.sk/nginx-full:certbot-node \\
 					sh -c "yarn install && yarn eslint . && rm -rf node_modules"
 				'''
 
