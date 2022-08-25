@@ -34,7 +34,7 @@ echo -e "${BLUE}❯ ${CYAN}Installing S6-overlay v${S6_OVERLAY_VERSION} for ${YE
 
 #curl -L -o "/tmp/s6-overlay-x86_64.tar.xz" "https://github.com/just-containers/s6-overlay/releases/download/v3.1.1.2/s6-overlay-x86_64.tar.xz"x \
 	#&& tar -xzf "/tmp/s6-overlay-x86_64.tar.xz" -C /
-
+apt-get update
 apt-get install xz-utils
 
 curl -L -o "/tmp/s6-overlay-${S6_ARCH}.tar.xz" "https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-${S6_ARCH}.tar.xz"x \
