@@ -10,7 +10,7 @@ RESET='\E[0m'
 
 S6_OVERLAY_VERSION=1.22.1.0
 TARGETPLATFORM=$1
-
+TARGETPLATFORM=linux/x86_64
 # Determine the correct binary file for the architecture given
 case $TARGETPLATFORM in
 	linux/arm64)
@@ -19,6 +19,10 @@ case $TARGETPLATFORM in
 
 	linux/arm/v7)
 		S6_ARCH=armhf
+		;;
+
+	linux/x86_64)
+		S6_ARCH=x86_64
 		;;
 
 	*)
