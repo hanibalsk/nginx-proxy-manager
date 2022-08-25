@@ -30,10 +30,9 @@ case $TARGETPLATFORM in
 		;;
 esac
 
-https://github.com/just-containers/s6-overlay/releases/download/v1.22.1.0/s6-overlay-x86_64.tar.xz
 echo -e "${BLUE}❯ ${CYAN}Installing S6-overlay v${S6_OVERLAY_VERSION} for ${YELLOW}${TARGETPLATFORM} (${S6_ARCH})${RESET}"
 
-curl -L -o "/tmp/s6-overlay-${S6_ARCH}.tar.gz" "https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-${S6_ARCH}.tar.gz" \
+curl -L -o "/tmp/s6-overlay-${S6_ARCH}.tar.gz" "https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-${S6_ARCH}.tar.xz" \
 	&& tar -xzf "/tmp/s6-overlay-${S6_ARCH}.tar.gz" -C /
 
 echo -e "${BLUE}❯ ${GREEN}S6-overlay install Complete${RESET}"
