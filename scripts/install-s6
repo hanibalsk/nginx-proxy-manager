@@ -40,6 +40,6 @@ xz --help
 curl -L -o "/tmp/s6-overlay-${S6_ARCH}.tar.xz" "https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-${S6_ARCH}.tar.xz" 
 ls -la
 
- tar -xzf "/tmp/s6-overlay-${S6_ARCH}.tar.xz" -C /
+ tar -xJf "/tmp/s6-overlay-${S6_ARCH}.tar.xz" -C /
 
 echo -e "${BLUE}❯ ${GREEN}S6-overlay install Complete${RESET}"
